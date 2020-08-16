@@ -1,0 +1,137 @@
+.form {
+  &__group {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+
+  &__input {
+    border-radius: 0.2rem;
+    display: block;
+    font-size: 1.4rem;
+    font-family: "Raleway";
+    border: none;
+    padding: 0.8rem;
+    background-color: $backg-color;
+    color: $color-primary;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+
+    &:focus {
+      outline: none;
+      &:not(:first-child) {
+        box-shadow: 0 1rem 2rem rgba(black, 0.1);
+        border-bottom: 3px solid $color-secondary;
+      }
+    }
+
+    &:focus:invalid:not(:first-child) {
+      outline: none;
+      border-bottom: 3px solid #ec7357;
+    }
+
+    &:required {
+      box-shadow: none;
+    }
+
+    &:invalid {
+      box-shadow: none;
+    }
+  }
+
+  &__textarea {
+    font-family: "Raleway";
+    width: 100%;
+    height: 20rem;
+    resize: none;
+    border: none;
+    border-radius: 0.2rem;
+    background-color: $backg-color;
+    color: $color-primary;
+    padding: 0.5rem;
+    border: 3px solid transparent;
+    transition: all 0.3s;
+
+    &:focus,
+    &:active {
+      outline: none;
+      border: 3px solid $color-secondary;
+    }
+
+    &:focus:invalid:not(:first-child) {
+      outline: none;
+      border: 3px solid #ec7357;
+    }
+
+    &:required {
+      box-shadow: none;
+    }
+
+    &:invalid {
+      box-shadow: none;
+    }
+  }
+
+  .btn {
+    align-self: flex-end;
+    z-index: 30;
+  }
+
+  &__selectdiv {
+    position: relative;
+    width: 40%;
+
+    @include respond(tab-port) {
+      width: 30rem;
+    }
+    select {
+      appearance: none;
+      display: block;
+      cursor: pointer;
+      border-radius: 0.2rem;
+      position: relative;
+    }
+
+    &::after {
+      content: "\25BC";
+      position: absolute;
+      border-radius: 0.2rem;
+      top: 0;
+      right: 0;
+      color: $color-primary;
+      padding: 0.3rem 1rem;
+      height: 100%;
+      background-color: $color-secondary;
+      cursor: pointer;
+      pointer-events: none;
+      transition: 0.2s ease;
+    }
+
+    &:hover::after {
+      color: $color-secondary;
+      background-color: $color-primary-dark;
+    }
+  }
+
+  //MEDIA QUERY
+
+  @include respond(tab-port) {
+    &__input {
+      font-weight: 700;
+      min-width: 30rem;
+    }
+    &__textarea {
+      font-weight: 700;
+      min-width: 30rem;
+    }
+  }
+
+  @include respond(small-phone) {
+    &__input {
+      font-size: 2.2rem;
+      padding: 1rem;
+    }
+  }
+}

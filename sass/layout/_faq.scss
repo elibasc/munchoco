@@ -1,0 +1,123 @@
+.section-faq {
+  grid-row: 6/7;
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+
+  //MEDIA QUERY
+  @include respond(phone-land) {
+    padding-top: 17rem;
+    grid-row: 7/8;
+  }
+
+  //SAFARI PADDING FIX
+  @include safari-fix {
+    @include respond(phone) {
+      padding-top: 4.5rem;
+    }
+  }
+
+  @include respond(xxl-desktop) {
+    padding-top: 3rem;
+  }
+}
+
+.faq {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+  width: 70%;
+
+  h2 {
+    display: block;
+    text-align: center;
+  }
+
+  //MEDIA QUERY
+  @include respond(phone-land) {
+    width: 90%;
+    padding-top: 10rem;
+  }
+  @include respond(phone) {
+    padding-top: 6rem;
+  }
+  @include respond(small-phone) {
+    padding-top: 4rem;
+  }
+  @include respond(xs-phone) {
+    padding-top: 2rem;
+  }
+
+  &__questions {
+    margin-top: 3rem;
+  }
+
+  &__question {
+    position: relative;
+    padding: 1.5rem;
+    border-bottom: 2px solid $color-primary-dark;
+    transition: all 0.2s ease-in-out;
+
+    h4 {
+      display: inline-block;
+    }
+    &:first-child {
+      border-top: 2px solid $color-primary-dark;
+    }
+
+    &:hover {
+      background-color: $color-primary;
+      color: $color-secondary;
+    }
+
+    &.active {
+      background-color: $color-primary;
+      color: $color-secondary;
+    }
+  }
+
+  &__answer {
+    display: block;
+    width: 100%;
+    position: relative;
+    text-align: justify;
+
+    hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    background-color: $color-secondary-light;
+    overflow: hidden;
+
+    transition: all 0.2s ease-in-out;
+
+    padding: 0 1rem;
+    height: 0;
+
+    p {
+      padding: 1.5rem;
+    }
+    &.active {
+      height: auto;
+      padding: 1.5rem 1rem;
+    }
+  }
+  //EXPAND BUTTON
+  &__expand {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 6rem;
+    transition: all 0.2s ease-in-out;
+
+    &.active {
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    &.active:hover {
+      color: $color-primary-dark;
+    }
+  }
+}

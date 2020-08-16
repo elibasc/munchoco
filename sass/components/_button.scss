@@ -1,0 +1,153 @@
+//BASIC BUTTONS
+.btn {
+  display: inline-block;
+  position: relative;
+  border: none;
+  padding: 1rem 2rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-weight: 300;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0rem 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+
+  transition: background-position 0.8s, color 0.3s, font-weight 0.3s;
+  background-color: transparent;
+
+  @include respond(small-phone) {
+    font-size: 2.2rem;
+    padding: 1.5rem 2.5rem;
+  }
+  &:link,
+  &:visited {
+    display: inline-block;
+    position: relative;
+    border: none;
+    padding: 1rem 2rem;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.8rem;
+    text-decoration: none;
+    font-weight: 300;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0rem 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+
+    transition: background-position 0.8s, color 0.3s, font-weight 0.3s;
+    background-color: transparent;
+
+    @include respond(small-phone) {
+      font-size: 2.2rem;
+      padding: 1.5rem 2.5rem;
+    }
+  }
+
+  //DARK VERSION
+  &--dark {
+    color: $color-secondary;
+    border-radius: 5rem;
+    background-clip: text;
+    backface-visibility: hidden;
+    background: linear-gradient(
+      45deg,
+      $color-secondary 50%,
+      $color-primary-dark 50%
+    );
+
+    position: relative;
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $color-primary-dark;
+      z-index: -1000;
+      border-radius: 5rem;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(60deg, $color-secondary 50%, transparent 50%);
+      z-index: -1;
+      border-radius: 5rem;
+    }
+
+    &,
+    &::after {
+      background-size: 300%;
+      background-position: 100%;
+      transition: 1s ease, color 0.1s ease;
+    }
+
+    &:hover,
+    &:hover::after {
+      background-position: 0;
+      color: $color-primary-dark;
+      font-weight: 400;
+    }
+  }
+
+  //LIGHT VERSION
+  &--light {
+    color: $color-primary-dark;
+    font-weight: 400;
+    border-radius: 5rem;
+    background-clip: text;
+    backface-visibility: hidden;
+    background: linear-gradient(
+      45deg,
+      $color-primary-dark 50%,
+      $color-secondary 50%
+    );
+
+    position: relative;
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $color-secondary;
+      z-index: -1000;
+      border-radius: 5rem;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(
+        60deg,
+        $color-primary-dark 50%,
+        transparent 50%
+      );
+      z-index: -1;
+      border-radius: 5rem;
+    }
+
+    &,
+    &::after {
+      background-size: 300%;
+      background-position: 100%;
+      transition: 1s ease, color 0.1s ease;
+    }
+
+    &:hover,
+    &:hover::after {
+      background-position: 0;
+      color: $color-secondary;
+      font-weight: 400;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.container {
+  display: grid;
+  position: relative;
+  grid-template-columns:
+    [ contact-start] minmax(8rem, 1fr) repeat(
+      3,
+      [col-start] minmax(min-content, 18rem) [col-end]
+    )
+    minmax(8rem, 1fr);
+
+  grid-template-rows: 5.7rem 50vw repeat(4, minmax(min-content, 95vh)) min-content;
+
+  //MEDIA QUERY
+  @include respond(tab-land) {
+    grid-template-rows: 5.7rem 50vw repeat(3, minmax(min-content, 80vh)) repeat(
+        2,
+        min-content
+      );
+  }
+
+  @include respond(phone-land) {
+    grid-template-rows: 5.7rem 65vw minmax(min-content, 60vh) min-content min-content repeat(
+        3,
+        min-content
+      );
+  }
+
+  @include respond(small-phone) {
+    grid-template-rows: 5.7rem 80vw minmax(min-content, 40vh) min-content min-content repeat(
+        3,
+        min-content
+      );
+
+    grid-template-columns: 1fr;
+  }
+
+  @include respond(desktop) {
+    grid-template-rows: 5.7rem 50vw repeat(4, minmax(min-content, 75vh)) min-content;
+  }
+}

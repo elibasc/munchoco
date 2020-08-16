@@ -1,0 +1,79 @@
+//MEDIA QUERY MANAGER
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == xs-phone {
+    @media only screen and (max-width: 20.62em) {
+      //330px
+      @content;
+    }
+  }
+
+  @if $breakpoint == small-phone {
+    @media only screen and (max-width: 28.12em) {
+      //450px
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      //600px
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone-land {
+    @media only screen and (max-width: 52em) {
+      //832px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 61.3em) {
+      //982px
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 81.4em) {
+      //1302px
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 91.6em) {
+      //1465px
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      //1800px
+      @content;
+    }
+  }
+
+  @if $breakpoint == xl-desktop {
+    @media only screen and (min-width: 123.65em) {
+      //1980px
+      @content;
+    }
+  }
+
+  @if $breakpoint == xxl-desktop {
+    @media only screen and (min-width: 137.8em) {
+      //2205px
+      @content;
+    }
+  }
+}
+
+@mixin safari-fix {
+  @media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) {
+      @content;
+    }
+  }
+}

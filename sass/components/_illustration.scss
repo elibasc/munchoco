@@ -1,0 +1,138 @@
+.illustration {
+  width: 30rem;
+  position: relative;
+
+  &__sugarcube--1 {
+    width: 13.5rem;
+    height: 13.5rem;
+    position: absolute;
+    top: -3rem;
+    left: 6rem;
+  }
+
+  &__sugarcube--2 {
+    width: 14rem;
+    height: 14rem;
+    transform: rotateY(-180deg);
+    position: absolute;
+    top: 16rem;
+    left: 30rem;
+  }
+
+  &__sugarcube--3 {
+    width: 17rem;
+    height: 17rem;
+    position: absolute;
+    top: 35rem;
+    left: 15rem;
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+  }
+
+  //MEDIA QUERY
+  @include respond(phone-land) {
+    margin-top: 4rem;
+    grid-column: 1/-1;
+    grid-row: 3;
+    height: 70rem;
+    justify-self: center;
+
+    &__sugarcube--1 {
+      width: 20rem;
+      height: 20rem;
+      top: -3rem;
+      left: -6rem;
+    }
+
+    &__sugarcube--2 {
+      width: 19rem;
+      height: 19rem;
+      top: 16rem;
+      left: 28rem;
+    }
+
+    &__sugarcube--3 {
+      width: 26rem;
+      height: 22rem;
+      top: 35rem;
+      left: 3rem;
+    }
+  }
+
+  @include respond(phone) {
+    &__sugarcube--1 {
+      width: 19rem;
+      height: 19rem;
+      top: 1rem;
+      left: -12rem;
+    }
+
+    &__sugarcube--2 {
+      width: 19rem;
+      height: 19rem;
+      top: 18rem;
+      left: 26rem;
+    }
+
+    &__sugarcube--3 {
+      width: 28rem;
+      height: 24rem;
+      top: 40rem;
+      left: 3.5rem;
+    }
+  }
+
+  @include safari-fix {
+    @include respond(phone) {
+      margin-top: 2rem;
+      height: 55rem;
+      &__sugarcube--1 {
+        width: 15.5rem;
+        height: 15.5rem;
+        top: 2rem;
+        left: -3rem;
+      }
+      &__sugarcube--2 {
+        width: 15.5rem;
+        height: 15.5rem;
+        top: 18rem;
+        left: 17rem;
+      }
+
+      &__sugarcube--3 {
+        width: 24rem;
+        height: 20rem;
+        top: 40rem;
+        left: 5rem;
+      }
+    }
+  }
+
+  @include respond(small-phone) {
+    &__sugarcube--1 {
+      top: 1rem;
+      left: -8rem;
+    }
+
+    &__sugarcube--2 {
+      top: 18rem;
+      left: 20rem;
+    }
+
+    &__sugarcube--3 {
+      top: 40rem;
+      left: 2rem;
+    }
+  }
+
+  @include safari-fix {
+    @include respond(small-phone) {
+      &__sugarcube--1 {
+        left: -3rem;
+      }
+    }
+  }
+}

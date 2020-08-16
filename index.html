@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Raleway:ital,wght@0,300;0,400;1,200;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./sass/main.css" />
+    <link rel="icon" href="./img/favicon.svg" />
+    <title>MunChoco &mdash; coffee and chocolate factory</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navigation" id="nav">
+        <ul class="nav__items">
+          <li class="nav__item">
+            <a href="#about" id="nav-about" class="nav__item-link">About Us</a>
+          </li>
+          <li class="nav__item">
+            <a href="#treats" id="nav-treats" class="nav__item-link"
+              >Our Treats</a
+            >
+          </li>
+          <li class="nav__icon">
+            <div class="nav__icon-container">
+              <svg class="nav__icon-img">
+                <use xlink:href="./img/sprites.svg#icon-logo"></use>
+              </svg>
+            </div>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" id="nav-contact" class="nav__item-link"
+              >Contact Us</a
+            >
+          </li>
+          <li class="nav__item">
+            <a href="#faq" id="nav-faq" class="nav__item-link">F.A.Q</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="fixed-navigation">
+        <div class="fixed-nav__container">
+          <div class="fixed-nav__icon" id="fixed-nav">
+            <svg class="fixed-nav__icon-img">
+              <use xlink:href="./img/sprites.svg#icon-logo"></use>
+            </svg>
+          </div>
+          <div class="fixed-nav__links">
+            <ul class="fixed-nav__items">
+              <li class="fixed-nav__item">
+                <a
+                  href="#about"
+                  data-page="about"
+                  class="fixed-nav__link"
+                  id="fixed-about"
+                  >About Us</a
+                >
+              </li>
+              <li class="fixed-nav__item">
+                <a
+                  data-page="treats"
+                  href="#treats"
+                  class="fixed-nav__link"
+                  id="fixed-treats"
+                  >Our Treats</a
+                >
+              </li>
+              <li class="fixed-nav__item">
+                <a
+                  data-page="contact"
+                  href="#contact"
+                  class="fixed-nav__link"
+                  id="fixed-contact"
+                  >Contact</a
+                >
+              </li>
+              <li class="fixed-nav__item">
+                <a
+                  data-page="faq"
+                  href="#faq"
+                  class="fixed-nav__link"
+                  id="fixed-faq"
+                  >F.A.Q</a
+                >
+              </li>
+              <div class="fixed-nav__indicator"></div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <nav class="phone-navigation">
+        <ul class="phone-nav__items">
+          <li class="phone-nav__item">
+            <a
+              href="#about"
+              id="phone-about"
+              data-page="about"
+              class="phone-nav__item-link"
+              >About Us</a
+            >
+          </li>
+          <li class="phone-nav__item">
+            <a
+              href="#treats"
+              id="phone-treats"
+              data-page="treats"
+              class="phone-nav__item-link"
+              >Our Treats</a
+            >
+          </li>
+          <li class="phone-nav__icon">
+            <div class="phone-nav__icon-container">
+              <svg class="phone-nav__icon-img">
+                <use xlink:href="./img/sprites.svg#icon-logo"></use>
+              </svg>
+            </div>
+          </li>
+          <li class="phone-nav__item">
+            <a
+              href="#contact"
+              id="phone-contact"
+              data-page="contact"
+              class="phone-nav__item-link"
+              >Contact Us</a
+            >
+          </li>
+          <li class="phone-nav__item">
+            <a
+              href="#faq"
+              id="phone-faq"
+              data-page="faq"
+              class="phone-nav__item-link"
+              >F.A.Q</a
+            >
+          </li>
+          <div class="phone-nav__indicator"></div>
+        </ul>
+      </nav>
+
+      <header class="header">
+        <div class="header__content">
+          <h1 class="heading__primary u-shadow-t header__title">MunChoco</h1>
+          <h3 class="heading__tertiary u-shadow-t">
+            Coffee and chocolate factory
+          </h3>
+          <a href="#treats" id="header-treats" class="btn btn--dark u-mt-xs"
+            >Discover our treats</a
+          >
+        </div>
+      </header>
+
+      <section class="section-about" data-index="0" id="about">
+        <div class="about__headings">
+          <h2 class="heading__secondary u-shadow-t about__title">
+            “Sweeten your life”
+          </h2>
+          <h3
+            class="heading__tertiary u-shadow-t heading__tertiary--bg about__subtitle"
+          >
+            that's how we started
+          </h3>
+        </div>
+
+        <div class="about__text u-mt-xs">
+          <p class="u-mb-xs">
+            &mdash;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+            diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+            erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+            tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+            consequat.
+          </p>
+          <p>
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum.Ut wisi enim ad minim
+            veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+            nisl ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-about-gallery">
+        <figure class="gallery__item gallery__item--1">
+          <img
+            src="img/photo1.jpg"
+            alt="Gallery image 1"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--2">
+          <img
+            src="./img/photo2.jpg"
+            alt="Gallery image 2"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--3">
+          <img
+            src="./img/photo3.jpg"
+            alt="Gallery image 3"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--4">
+          <img
+            src="./img/photo4.jpg"
+            alt="Gallery image 4"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--5">
+          <img
+            src="./img/photo5.jpg"
+            alt="Gallery image 5"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--6">
+          <img
+            src="./img/photo6.jpg"
+            alt="Gallery image 6"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--7">
+          <img
+            src="./img/photo7.jpg"
+            alt="Gallery image 7"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--8">
+          <img
+            src="./img/photo8.jpg"
+            alt="Gallery image 8"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--9">
+          <img
+            src="./img/photo9.jpg"
+            alt="Gallery image 9"
+            class="gallery__img"
+          />
+        </figure>
+      </section>
+
+      <section class="section-treats" data-index="1" id="treats">
+        <div class="illustration">
+          <div class="illustration__sugarcube--1" id="sugarcube-1">
+            <img
+              src="./img/sugarcube1.svg"
+              alt="Sugar cube"
+              class="illustration__img"
+            />
+          </div>
+          <div class="illustration__sugarcube--2" id="sugarcube-2">
+            <img
+              src="./img/sugarcube1.svg"
+              alt="Sugar cube"
+              class="illustration__img"
+            />
+          </div>
+          <div class="illustration__sugarcube--3" id="sugarcube-3">
+            <img
+              src="./img/sugarcube2.svg"
+              alt="Sugar cube"
+              class="illustration__img"
+            />
+          </div>
+        </div>
+        <div class="treats">
+          <h1 class="heading__primary u-shadow-t u-font-lg treats__title">
+            Our Treats
+          </h1>
+          <div class="icons">
+            <span
+              class="icons__icon-container"
+              data-modal-target="#modal-coffee"
+            >
+              <svg class="icons__icon--1">
+                <use xlink:href="./img/sprites.svg#icon-coffee"></use>
+              </svg>
+            </span>
+            <span
+              class="icons__icon-container"
+              data-modal-target="#modal-chocolate"
+            >
+              <svg class="icons__icon--2">
+                <use xlink:href="./img/sprites.svg#icon-chocolate"></use>
+              </svg>
+            </span>
+            <span
+              class="icons__icon-container"
+              data-modal-target="#modal-bombon"
+            >
+              <svg class="icons__icon--3">
+                <use xlink:href="./img/sprites.svg#icon-bombon"></use>
+              </svg>
+            </span>
+          </div>
+          <div class="treats__text">
+            <p id="icon-call"><em>Click on us!</em></p>
+            <hr />
+            <p>
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum.Ut wisi enim ad minim
+              veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+              nisl ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </div>
+
+        <section class="section-modal">
+          <div class="modal" id="modal-coffee">
+            <div class="modal__container">
+              <div class="modal__images">
+                <figure class="modal__img">
+                  <img src="./img/coffee-1.jpg" alt="Coffee photo" srcset="" />
+                </figure>
+                <figure class="modal__img">
+                  <img src="./img/coffee-2.jpg" alt="Coffee photo" srcset="" />
+                </figure>
+                <figure class="modal__img">
+                  <img src="./img/coffee-3.jpg" alt="Coffee photo" srcset="" />
+                </figure>
+              </div>
+              <div class="modal__text">
+                <h2 class="heading__secondary modal__title u-mb-sm u-mt-xs">
+                  Coffee
+                </h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas
+                  totam, quisquam numquam ea rerum ab itaque accusamus pariatur,
+                  debitis neque possimus rem consequatur obcaecati! Tempore
+                  perferendis sed pariatur praesentium, quasi accusantium?
+                  Veniam totam reprehenderit porro hic labore asperiores.
+                </p>
+
+                <p>
+                  Rem asperiores aliquam vitae assumenda neque cupiditate quos
+                  optio, temporibus beatae eos, hic sit saepe veniam? Fugit
+                  atque iste consequuntur nam maiores nobis excepturi, sapiente
+                  quam tenetur repellat nisi veritatis ab sequi cum nostrum
+                  impedit vel illo dicta? Eius at, excepturi saepe a, eaque
+                  iusto reprehenderit nobis eveniet aliquid quisquam, est
+                  nesciunt. In et facilis possimus pariatur fuga at eaque
+                  praesentium cumque!
+                </p>
+              </div>
+              <div class="modal__svg">
+                <svg class="icons__icon--1">
+                  <use xlink:href="./img/sprites.svg#icon-coffee"></use>
+                </svg>
+              </div>
+              <button data-close-button class="modal__close">&times;</button>
+            </div>
+          </div>
+          <div class="modal" id="modal-chocolate">
+            <div class="modal__container">
+              <div class="modal__images">
+                <figure class="modal__img">
+                  <img
+                    src="./img/chocolate-1.jpg"
+                    alt="Chocolate photo"
+                    srcset=""
+                  />
+                </figure>
+                <figure class="modal__img">
+                  <img
+                    src="./img/chocolate-2.jpg"
+                    alt="Chocolate photo"
+                    srcset=""
+                  />
+                </figure>
+                <figure class="modal__img">
+                  <img
+                    src="./img/chocolate-3.jpg"
+                    alt="Chocolate photo"
+                    srcset=""
+                  />
+                </figure>
+              </div>
+              <div class="modal__text">
+                <h2 class="heading__secondary modal__title u-mb-sm u-mt-xs">
+                  Chocolate
+                </h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas
+                  totam, quisquam numquam ea rerum ab itaque accusamus pariatur,
+                  debitis neque possimus rem consequatur obcaecati! Tempore
+                  perferendis sed pariatur praesentium, quasi accusantium?
+                  Veniam totam reprehenderit porro hic labore asperiores.
+                </p>
+
+                <p>
+                  Rem asperiores aliquam vitae assumenda neque cupiditate quos
+                  optio, temporibus beatae eos, hic sit saepe veniam? Fugit
+                  atque iste consequuntur nam maiores nobis excepturi, sapiente
+                  quam tenetur repellat nisi veritatis ab sequi cum nostrum
+                  impedit vel illo dicta? Eius at, excepturi saepe a, eaque
+                  iusto reprehenderit nobis eveniet aliquid quisquam, est
+                  nesciunt. In et facilis possimus pariatur fuga at eaque
+                  praesentium cumque!
+                </p>
+              </div>
+              <div class="modal__svg">
+                <svg class="icons__icon--2">
+                  <use xlink:href="./img/sprites.svg#icon-chocolate"></use>
+                </svg>
+              </div>
+              <button data-close-button class="modal__close">&times;</button>
+            </div>
+          </div>
+          <div class="modal" id="modal-bombon">
+            <div class="modal__container">
+              <div class="modal__images">
+                <figure class="modal__img">
+                  <img src="./img/bonbon-1.jpg" alt="Bonbon photo" srcset="" />
+                </figure>
+                <figure class="modal__img">
+                  <img src="./img/bonbon-2.jpg" alt="Bonbon photo" srcset="" />
+                </figure>
+                <figure class="modal__img">
+                  <img src="./img/bonbon-3.jpg" alt="Bonbon photo" srcset="" />
+                </figure>
+              </div>
+              <div class="modal__text">
+                <h2 class="heading__secondary modal__title u-mb-sm u-mt-xs">
+                  Bonbon
+                </h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas
+                  totam, quisquam numquam ea rerum ab itaque accusamus pariatur,
+                  debitis neque possimus rem consequatur obcaecati! Tempore
+                  perferendis sed pariatur praesentium, quasi accusantium?
+                  Veniam totam reprehenderit porro hic labore asperiores.
+                </p>
+
+                <p>
+                  Rem asperiores aliquam vitae assumenda neque cupiditate quos
+                  optio, temporibus beatae eos, hic sit saepe veniam? Fugit
+                  atque iste consequuntur nam maiores nobis excepturi, sapiente
+                  quam tenetur repellat nisi veritatis ab sequi cum nostrum
+                  impedit vel illo dicta? Eius at, excepturi saepe a, eaque
+                  iusto reprehenderit nobis eveniet aliquid quisquam, est
+                  nesciunt. In et facilis possimus pariatur fuga at eaque
+                  praesentium cumque!
+                </p>
+              </div>
+              <div class="modal__svg">
+                <svg class="icons__icon--3">
+                  <use xlink:href="./img/sprites.svg#icon-bombon"></use>
+                </svg>
+              </div>
+              <button data-close-button class="modal__close">&times;</button>
+            </div>
+          </div>
+          <div class="overlay" id="overlay"></div>
+        </section>
+      </section>
+
+      <section class="bg-video">
+        <h3 class="heading__tertiary heading__tertiary--bg bg-video__text">
+          Visit out coffee shop to try and get our products!
+        </h3>
+
+        <div class="bg-video__container">
+          <video class="bg-video__content" autoplay muted loop>
+            <source src="img/video.mp4" type="video/mp4" />
+            <source src="img/video.webm" type="video/webm" />
+            Your browser is not supported!
+          </video>
+        </div>
+      </section>
+
+      <section class="section-contact" data-index="2" id="contact">
+        <div class="contact">
+          <h2 class="heading__secondary u-shadow-t u-mt-xs">Contact us</h2>
+
+          <form action="" id="contactform" class="form" name="contact" netlify>
+            <label for="subject" class="form__label">Subject:</label>
+            <div class="form__group form__selectdiv">
+              <select name="subject" id="subject" class="form__input" required>
+                <option value="Select" disabled selected
+                  >Select a subject</option
+                >
+                <option value="General Enquiry">General Enquiry</option>
+                <option value="Technical Questions">Technical Questions</option>
+                <option value="Product Related">Product Related</option>
+                <option value="Booking">Booking</option>
+              </select>
+            </div>
+
+            <div class="form__group">
+              <label for="email" class="form__label">Email:</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="form__input"
+                required
+              />
+            </div>
+
+            <div class="form__group">
+              <label for="name" class="form__label">Name:</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="form__input"
+                required
+              />
+            </div>
+
+            <div class="form__group">
+              <label for="message" class="form__label">Message:</label>
+              <textarea
+                name="message"
+                id="message"
+                form="contactform"
+                required
+                class="form__textarea"
+                minlength="30"
+              ></textarea>
+            </div>
+
+            <div class="form__group">
+              <button class="btn btn--light">Submit</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="section-faq" data-index="3" id="faq">
+        <div class="faq">
+          <h2
+            class="faq__title heading__secondary u-shadow-t heading__secondary--dark"
+          >
+            Frequently Asked Questions
+          </h2>
+
+          <div class="faq__questions">
+            <div class="faq__question active">
+              <h4 class="heading__quaternary heading__quaternary--dark">
+                <em>Q.Exceptenur ipsum dolor sit amet?</em>
+              </h4>
+              <span class="faq__expand active" data-question="0">&plus;</span>
+            </div>
+
+            <div class="faq__answer active" data-answer="0">
+              <p class="faq__answer-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates ullam tempora repellat quo officiis aperiam voluptate
+                laudantium modi consectetur! Repudiandae vel excepturi
+                dignissimos, aliquam possimus expedita adipisci sapiente ullam
+                placeat, sit reprehenderit esse ratione, reiciendis soluta
+                aperiam laudantium. Cupiditate sequi neque omnis debitis
+                voluptatem, architecto dolores libero aspernatur quasi ex sint
+                iure officia quia blanditiis! Quo eos dolores perferendis cum.
+              </p>
+            </div>
+
+            <div class="faq__question">
+              <h4 class="heading__quaternary heading__quaternary--dark">
+                <em> Q.Sed ipsam consectetur eius tempora?</em>
+              </h4>
+              <span class="faq__expand" data-question="1">&plus;</span>
+            </div>
+
+            <div class="faq__answer" data-answer="1">
+              <p class="faq__answer-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Praesentium et maxime sunt similique, quo molestiae nostrum at
+                voluptatem. Natus provident consequatur iste doloribus beatae
+                enim saepe suscipit pariatur nihil, velit fugit magnam ut
+                maiores, distinctio adipisci assumenda veritatis architecto
+                corrupti quidem, impedit laudantium. Nesciunt, ipsum excepturi
+                similique tenetur sit voluptatum quas ducimus reiciendis tempore
+                voluptatem iure necessitatibus cumque repellat minus obcaecati
+                provident maxime neque, suscipit saepe pariatur dolorem delectus
+                dicta! Sed, aliquid? A, hic quaerat ad sit consequuntur dolorum
+                esse.
+              </p>
+            </div>
+
+            <div class="faq__question">
+              <h4 class="heading__quaternary heading__quaternary--dark">
+                <em> Q.Amet pariatur deserunt rerum fuga?</em>
+              </h4>
+              <span class="faq__expand" data-question="2">&plus;</span>
+            </div>
+
+            <div class="faq__answer" data-answer="2">
+              <p class="faq__answer-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni
+                rerum repellat ducimus eveniet possimus impedit quibusdam, earum
+                facilis minus natus dolores repellendus consequatur ratione, vel
+                accusantium, cupiditate voluptas. Eius in ab architecto fugiat
+                corporis eligendi laboriosam cumque dolores. In, maiores?
+              </p>
+            </div>
+
+            <div class="faq__question">
+              <h4 class="heading__quaternary heading__quaternary--dark">
+                <em> Q.Consectetur adispiscing elit amet?</em>
+              </h4>
+              <span class="faq__expand" data-question="3">&plus;</span>
+            </div>
+            <div class="faq__answer" data-answer="3">
+              <p class="faq__answer-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor
+                nulla facere sequi fugit ea, praesentium quaerat deleniti
+                reprehenderit assumenda impedit laborum itaque laboriosam
+                aliquid dignissimos quis omnis illo consequatur nostrum.
+                Repellat ea quidem, nihil dicta minus aspernatur iusto
+                asperiores, molestias numquam omnis vitae! Veritatis
+                necessitatibus optio, sed fugit harum voluptates adipisci saepe
+                cupiditate nostrum aliquid voluptas nesciunt vitae eveniet totam
+                magnam, ipsa natus error consectetur fuga porro, iste officia
+                unde. Expedita adipisci aliquam ad voluptatem laudantium totam,
+                ea praesentium sed aut eum iste consectetur quis qui pariatur
+                tenetur porro id cumque repellendus! Harum ipsa quis voluptatem
+                ullam facere ex quam?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__navigation">
+          <ul class="footer__links">
+            <li>
+              <a href="#about" id="footer-about" class="footer__link"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a href="#treats" id="footer-treats" class="footer__link"
+                >Our Treats</a
+              >
+            </li>
+            <li>
+              <a href="#contact" id="footer-contact" class="footer__link"
+                >Contact Us</a
+              >
+            </li>
+            <li>
+              <a href="#faq" id="footer-faq" class="footer__link">F.A.Q</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__info u-mt-md u-mb-xs">
+          <div class="footer__logo">
+            <svg id="footer-header" class="nav__icon-img">
+              <use xlink:href="./img/sprites.svg#icon-logo"></use>
+            </svg>
+          </div>
+          <p class="footer__copyright">
+            &COPY; Copyright by MunChoco. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/media.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

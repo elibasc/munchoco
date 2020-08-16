@@ -1,0 +1,57 @@
+.u {
+  //MARINGS
+  &-mt {
+    &-lg {
+      margin-top: 8rem !important;
+    }
+    &-md {
+      margin-top: 6rem !important;
+    }
+    &-sm {
+      margin-top: 4rem !important;
+    }
+    &-xs {
+      margin-top: 2rem !important;
+    }
+  }
+
+  &-mb {
+    &-lg {
+      margin-bottom: 8rem !important;
+    }
+    &-md {
+      margin-bottom: 6rem !important;
+    }
+    &-sm {
+      margin-bottom: 4rem !important;
+    }
+    &-xs {
+      margin-bottom: 2rem !important;
+    }
+
+    &-pt {
+      &-lg {
+        padding-top: 8rem !important;
+      }
+      &-md {
+        padding-top: 6rem !important;
+      }
+      &-sm {
+        padding-top: 4rem !important;
+      }
+      &-xs {
+        padding-top: 2rem !important;
+      }
+    }
+  }
+
+  //SHADOWS
+
+  &-shadow {
+    &-t {
+      text-shadow: 0rem 0.2rem 0.4rem rgba(32, 10, 1, 0.2) !important;
+    }
+  }
+
+  //SPECIAL FONT-SIZE
+}

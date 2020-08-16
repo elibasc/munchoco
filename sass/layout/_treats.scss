@@ -1,0 +1,124 @@
+.section-treats {
+  grid-row: 4/5;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 50rem 1fr;
+  margin-top: 2rem;
+  padding-top: 8rem;
+
+  //MEDIA QUERY
+  @include respond(tab-land) {
+    margin: 2rem 0;
+    padding: 0;
+  }
+
+  @include respond(phone-land) {
+    grid-row: 5/6;
+    grid-template-rows: repeat(3, min-content);
+    grid-template-columns: 1fr;
+  }
+}
+
+.treats {
+  &__title {
+    display: inline-block;
+    font-size: 11vw;
+    line-height: 10rem;
+    @include respond(phone-land) {
+      font-size: 14rem;
+      line-height: 12rem;
+    }
+    @include safari-fix {
+      @include respond(small-phone) {
+        line-height: normal;
+      }
+    }
+  }
+
+  &__text {
+    margin-bottom: 6rem;
+    p:not(:last-child) {
+      text-align: right;
+      font-weight: bold;
+      @include respond(phone-land) {
+        display: none;
+      }
+    }
+
+    hr {
+      margin-bottom: 2rem;
+      width: 90%;
+      margin-left: 10%;
+      border: 0;
+      border-top: 0.02rem solid $color-primary;
+    }
+    p {
+      padding-left: 3rem;
+      width: 80%;
+      margin: 0 auto;
+      text-align: justify;
+    }
+  }
+
+  //MEDIA QUERY
+  @include respond(phone-land) {
+    grid-column: 1/-1;
+    margin: 3rem auto;
+    width: 80%;
+    text-align: center;
+    &__text {
+      display: none;
+    }
+  }
+
+  @include respond(big-desktop) {
+    &__text {
+      margin-left: 10rem;
+    }
+  }
+}
+
+.icons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  [class^="icons__icon--"] {
+    height: 8rem;
+    width: 8rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: $backg-color;
+  }
+
+  &__icon-container {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    height: 10.5rem;
+    width: 10.5rem;
+    background-color: $color-primary;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+
+    &.active {
+      animation: float 1s ease-in-out infinite;
+      background-color: $color-secondary;
+    }
+  }
+
+  &__icon-container:hover {
+    animation: float 1s ease-in-out infinite;
+    background-color: $color-secondary;
+  }
+  &__icon-container:hover [class^="icons__icon--"] {
+    fill: $color-primary;
+  }
+
+  @include respond(big-desktop) {
+    position: relative;
+    z-index: 1000;
+  }
+}

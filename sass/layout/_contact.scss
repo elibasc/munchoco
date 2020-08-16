@@ -1,0 +1,89 @@
+.section-contact {
+  grid-row: 5/6;
+  grid-column: 1 / col-start 2;
+
+  background-color: $color-primary;
+  position: relative;
+  padding: 3rem;
+  color: $color-secondary;
+
+  //MEDIA QUERY
+  @include respond(tab-port) {
+  }
+  @include respond(phone-land) {
+    grid-row: 6/7;
+    grid-column: 1 / -1;
+  }
+}
+
+.contact {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -29.6rem;
+    left: -0.3rem;
+    height: 30rem;
+    width: 100%;
+    background: url("../../img/SVG/chocolatepour.svg") bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 99%;
+    left: 0;
+    height: 22rem;
+    width: 100%;
+    background-color: $color-primary;
+    mask: url("../../img/SVG/chocolatedripmask.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+  }
+
+  //MEDIA QUERY
+  @include respond(tab-port) {
+    width: 90%;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 7.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  @include respond(phone-land) {
+    width: 80%;
+
+    h2 {
+      font-size: 8rem;
+      text-align: center;
+    }
+
+    &::before {
+      height: 40rem;
+      top: -39.6rem;
+    }
+    &::after {
+      mask-repeat: repeat-x;
+      mask-size: 100%;
+      top: 92%;
+      height: 36rem;
+    }
+  }
+
+  @include respond(small-phone) {
+    &::after {
+      top: 95%;
+    }
+  }
+
+  @include respond(xxl-desktop) {
+    &::after {
+      mask-size: cover;
+      mask-position: right;
+      height: 24.5rem;
+    }
+  }
+}

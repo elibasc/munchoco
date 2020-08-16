@@ -1,0 +1,68 @@
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $color-primary;
+  font-size: $default-font-size;
+
+  @include respond(small-phone) {
+    font-size: 2.2rem;
+  }
+}
+
+.heading {
+  &__primary {
+    font-family: "Berkshire Swash";
+    font-size: 18rem;
+    color: $color-secondary;
+    line-height: 17rem;
+
+    @include safari-fix {
+      @include respond(phone-land) {
+        line-height: normal;
+      }
+    }
+  }
+
+  &__secondary {
+    font-family: "Berkshire Swash";
+    font-size: 7rem;
+    color: $color-secondary;
+    line-height: 10rem;
+
+    &--dark {
+      color: $color-primary;
+    }
+    @include respond(phone-land) {
+      margin-bottom: 1rem;
+    }
+
+    @include respond(phone) {
+      font-size: 9rem;
+      line-height: 10rem;
+    }
+
+    @include safari-fix {
+      @include respond(phone-land) {
+        line-height: normal;
+      }
+    }
+  }
+
+  &__tertiary {
+    font-style: italic;
+    font-size: 3rem;
+    font-weight: 300;
+    color: $color-secondary;
+
+    &--bg {
+      background-color: $color-primary;
+      font-size: 2.5rem;
+      line-height: 3.5rem;
+      z-index: 1000;
+    }
+  }
+  @include respond(phone-land) {
+    font-weight: bold;
+  }
+}

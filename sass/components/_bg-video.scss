@@ -1,0 +1,33 @@
+.bg-video {
+  grid-row: 5/6;
+  grid-column: 1/-1;
+  position: relative;
+
+  //MEDIA QUERY
+  @include respond(phone-land) {
+    grid-row: 6/7;
+    display: none;
+  }
+
+  &__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
+  }
+  &__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__text {
+    position: absolute;
+    right: 0;
+    top: 85%;
+    padding: 0 1rem;
+  }
+}
